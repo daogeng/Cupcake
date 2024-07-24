@@ -816,7 +816,8 @@ func cpk_swizzleMethodsIfNeed() {
         UITextField.cpk_swizzle(method1: #selector(UITextField.editingRect(forBounds:)),
                                 method2: #selector(UITextField.cpk_editingRect(forBounds:)))
         
-        UITextView.cpk_swizzle(method1: "dealloc", method2: #selector(UITextView.cpk_deinit))
+        /* UITextView 闪退
+        UITextView.cpk_swizzle(method1: "dealloc", method2: #selector(UITextView.cpk_deinit)) */
     }
 }
 
